@@ -1,0 +1,7 @@
+<div class="container" *ngIf="socialAuthService.authState | async as socialUser">
+    <div class="form-group">
+      <h2>Home</h2>
+      <p>Welcome {{socialUser.email}} </p>
+    </div>
+    <button type="button" (click)="logOut()" class="btn btn-primary">Logout</button>
+</div>
