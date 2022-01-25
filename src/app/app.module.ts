@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { SocialLoginModule, SocialAuthServiceConfig, GoogleLoginProvider } from 'angularx-social-login';
 import { AfterLoginComponent } from './after-login/after-login.component';
+import { AuthGuardService } from './auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AfterLoginComponent } from './after-login/after-login.component';
           }
         ]
       } as SocialAuthServiceConfig,
-    }    
+    },
+    AuthGuardService    
   ],
   bootstrap: [AppComponent]
 })
